@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Demo.SecondPage">
+    <Grid RowDefinitions="*,*,*">
+        <Button Grid.Row="0" Text="Animate heart"  
+                VerticalOptions="End" 
+                HorizontalOptions="Center"
+                Clicked="Button_Clicked"/>
+        <Path Grid.Row="1"
+              x:Name="Heart"
+              Fill="Red"
+              VerticalOptions="Start"
+              HorizontalOptions="Center"
+              Data="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5 2,5.41 4.42,3 7.5,3 9.24,3 10.91,3.81 12,5.08 13.09,3.81 14.76,3 16.5,3 19.58,3 22,5.41 22,8.5 22,12.27 18.6,15.36 13.45,20.03L12,21.35z" />
+        
+        <CollectionView Grid.Row="2">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Item1</x:String>
+                    <x:String>Item2</x:String>
+                    <x:String>Item3</x:String>
+                    <x:String>Item4</x:String>
+                    <x:String>Item5</x:String>
+                    <x:String>Item6</x:String>
+                    <x:String>Item7</x:String>
+                    <x:String>Item8</x:String>
+                    <x:String>Item9</x:String>
+                    <x:String>Item11</x:String>
+                    <x:String>Item11</x:String>
+                    <x:String>Item1</x:String>
+                    <x:String>Item1</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}" TextColor="Green" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
