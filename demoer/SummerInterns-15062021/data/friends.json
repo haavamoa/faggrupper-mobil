@@ -1,74 +1,448 @@
 [
     {
-    "id": 0,
-    "name": "Sondra Morin"
+        "gender": "female",
+        "name": {
+            "title": "Miss",
+            "first": "Lily",
+            "last": "Walker"
+        },
+        "location": {
+            "street": {
+                "number": 5239,
+                "name": "Grove Road"
+            },
+            "city": "Bangor",
+            "state": "West Glamorgan",
+            "country": "United Kingdom",
+            "postcode": "F76 9TZ",
+            "coordinates": {
+                "latitude": "13.0183",
+                "longitude": "115.3091"
+            },
+            "timezone": {
+                "offset": "-11:00",
+                "description": "Midway Island, Samoa"
+            }
+        },
+        "email": "lily.walker@example.com",
+        "dob": {
+            "date": "1969-08-10T09:23:22.854Z",
+            "age": 52
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/59.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/59.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/59.jpg"
+        },
+        "nat": "GB"
     },
     {
-    "id": 1,
-    "name": "Herman Blankenship"
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Nathan",
+            "last": "Williams"
+        },
+        "location": {
+            "street": {
+                "number": 4168,
+                "name": "Frederick Street"
+            },
+            "city": "Timaru",
+            "state": "West Coast",
+            "country": "New Zealand",
+            "postcode": 54814,
+            "coordinates": {
+                "latitude": "-0.7904",
+                "longitude": "173.9667"
+            },
+            "timezone": {
+                "offset": "+3:00",
+                "description": "Baghdad, Riyadh, Moscow, St. Petersburg"
+            }
+        },
+        "email": "nathan.williams@example.com",
+        "dob": {
+            "date": "1971-02-26T13:19:37.971Z",
+            "age": 50
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/35.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/35.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/35.jpg"
+        },
+        "nat": "NZ"
     },
     {
-    "id": 2,
-    "name": "Jeanine Harmon"
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Howard",
+            "last": "Stephens"
+        },
+        "location": {
+            "street": {
+                "number": 5206,
+                "name": "Chester Road"
+            },
+            "city": "Lichfield",
+            "state": "Gwynedd County",
+            "country": "United Kingdom",
+            "postcode": "LN4I 3YL",
+            "coordinates": {
+                "latitude": "-32.8395",
+                "longitude": "163.9004"
+            },
+            "timezone": {
+                "offset": "+5:00",
+                "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+            }
+        },
+        "email": "howard.stephens@example.com",
+        "login": {
+            "uuid": "45dd49d5-da60-42b3-bdf3-a679ad44a554",
+            "username": "bigmouse931",
+            "password": "killme",
+            "salt": "SEbLjGfG",
+            "md5": "78c42bf54059cc4cf6dbcb3752809e78",
+            "sha1": "016582f47d111d2f2e81ba2fa68cb7ec15e32cb9",
+            "sha256": "3761bc9ccdcd3b710440720436cae9b66703166c4313ee22da408ad381c19c75"
+        },
+        "dob": {
+            "date": "1972-07-23T11:12:06.919Z",
+            "age": 49
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/38.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/38.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/38.jpg"
+        },
+        "nat": "GB"
     },
     {
-    "id": 3,
-    "name": "Castro Fox"
+        "gender": "female",
+        "name": {
+            "title": "Mrs",
+            "first": "Sara",
+            "last": "Larson"
+        },
+        "location": {
+            "street": {
+                "number": 5542,
+                "name": "Victoria Road"
+            },
+            "city": "Armagh",
+            "state": "Kent",
+            "country": "United Kingdom",
+            "postcode": "PH2 4YW",
+            "coordinates": {
+                "latitude": "78.9593",
+                "longitude": "36.5787"
+            },
+            "timezone": {
+                "offset": "0:00",
+                "description": "Western Europe Time, London, Lisbon, Casablanca"
+            }
+        },
+        "email": "sara.larson@example.com",
+        "login": {
+            "uuid": "6a07d275-5810-4bbb-b811-016886aca11f",
+            "username": "redmeercat154",
+            "password": "shao",
+            "salt": "K4MeQT6u",
+            "md5": "d3fd9845a5fbc2869431df62d30e371d",
+            "sha1": "d21adc692af31ce3b607ba4fba3ee034521d9301",
+            "sha256": "fa1a013dfa904375a9a537dc1851d6fb9fd6f1b55dd8aac5cf15eff006d304ed"
+        },
+        "dob": {
+            "date": "1952-05-31T03:27:36.006Z",
+            "age": 69
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/80.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/80.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/80.jpg"
+        },
+        "nat": "GB"
     },
     {
-    "id": 4,
-    "name": "Loretta Boyle"
+        "gender": "female",
+        "name": {
+            "title": "Ms",
+            "first": "Asuncion",
+            "last": "Rodriguez"
+        },
+        "location": {
+            "street": {
+                "number": 153,
+                "name": "Calle de Argumosa"
+            },
+            "city": "Lorca",
+            "state": "Melilla",
+            "country": "Spain",
+            "postcode": 40171,
+            "coordinates": {
+                "latitude": "-17.2645",
+                "longitude": "147.2764"
+            },
+            "timezone": {
+                "offset": "0:00",
+                "description": "Western Europe Time, London, Lisbon, Casablanca"
+            }
+        },
+        "email": "asuncion.rodriguez@example.com",
+        "login": {
+            "uuid": "d05d6c7c-60dd-43ce-bc95-343bafbf2591",
+            "username": "crazywolf680",
+            "password": "dawson",
+            "salt": "PvHgiAqK",
+            "md5": "d05525580e3f9e7a8ebc1a91fbc28b5f",
+            "sha1": "da04246dcb2139cd3c4b0d07582ac8ec5bd1aad4",
+            "sha256": "90d27a97d3996a5f88d6be85a7f07e4b5160e401d85c1c281ac11f70e79ac893"
+        },
+        "dob": {
+            "date": "1946-04-13T21:53:22.974Z",
+            "age": 75
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/40.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/40.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/40.jpg"
+        },
+        "nat": "ES"
     },
     {
-    "id": 5,
-    "name": "Karen Kaufman"
+        "gender": "female",
+        "name": {
+            "title": "Mrs",
+            "first": "Meral",
+            "last": "Karaer"
+        },
+        "location": {
+            "street": {
+                "number": 6127,
+                "name": "Tunalı Hilmi Cd"
+            },
+            "city": "Kırıkkale",
+            "state": "Adana",
+            "country": "Turkey",
+            "postcode": 17501,
+            "coordinates": {
+                "latitude": "69.1032",
+                "longitude": "-7.5875"
+            },
+            "timezone": {
+                "offset": "-4:00",
+                "description": "Atlantic Time (Canada), Caracas, La Paz"
+            }
+        },
+        "email": "meral.karaer@example.com",
+        "login": {
+            "uuid": "bce13223-3fb5-4725-b8f5-2d09bd6ce864",
+            "username": "bigostrich611",
+            "password": "glock",
+            "salt": "r1XbXNGQ",
+            "md5": "5bf13c799206be69df452593bb025959",
+            "sha1": "b3b320acba849af70bc2f2a53586fb6989d8a723",
+            "sha256": "d1ec39810530edc96d4d7fa915fb820bffa70cb3ab71a7594217051d2ec35a78"
+        },
+        "dob": {
+            "date": "1995-02-22T03:27:06.239Z",
+            "age": 26
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/63.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/63.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/63.jpg"
+        },
+        "nat": "TR"
     },
     {
-    "id": 6,
-    "name": "Reyes Adams"
+        "gender": "female",
+        "name": {
+            "title": "Miss",
+            "first": "Stella",
+            "last": "Stelter"
+        },
+        "location": {
+            "street": {
+                "number": 8107,
+                "name": "Marktplatz"
+            },
+            "city": "Ortrand",
+            "state": "Hessen",
+            "country": "Germany",
+            "postcode": 80846,
+            "coordinates": {
+                "latitude": "53.2161",
+                "longitude": "162.7061"
+            },
+            "timezone": {
+                "offset": "0:00",
+                "description": "Western Europe Time, London, Lisbon, Casablanca"
+            }
+        },
+        "email": "stella.stelter@example.com",
+        "login": {
+            "uuid": "770722b3-38f4-4178-931a-70df31f8df7a",
+            "username": "goldenostrich287",
+            "password": "dian",
+            "salt": "qWDbIsiX",
+            "md5": "857e099c3954041991bd89f9f46cc627",
+            "sha1": "7f2e0d9456339378877f65bb6d55b8ce0d8558b4",
+            "sha256": "aa594e899c654c81ad9f1e276d800edfde847918e28091755233c8d62c24d359"
+        },
+        "dob": {
+            "date": "1980-07-26T11:20:48.236Z",
+            "age": 41
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/women/1.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/women/1.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/women/1.jpg"
+        },
+        "nat": "DE"
     },
     {
-    "id": 7,
-    "name": "Deana Fowler"
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Eetu",
+            "last": "Nurmi"
+        },
+        "location": {
+            "street": {
+                "number": 1904,
+                "name": "Hatanpään Valtatie"
+            },
+            "city": "Lapinjärvi",
+            "state": "Northern Savonia",
+            "country": "Finland",
+            "postcode": 82474,
+            "coordinates": {
+                "latitude": "-55.5838",
+                "longitude": "140.1661"
+            },
+            "timezone": {
+                "offset": "-6:00",
+                "description": "Central Time (US & Canada), Mexico City"
+            }
+        },
+        "email": "eetu.nurmi@example.com",
+        "login": {
+            "uuid": "83b856db-8177-4ab7-8928-18829e876e95",
+            "username": "greenkoala700",
+            "password": "chong",
+            "salt": "bausBLgx",
+            "md5": "ed15b1f5501f8e8d6057b7496b50171d",
+            "sha1": "ecf599c947679e0230c40ee431f0551b4fdbfd88",
+            "sha256": "f020208d313575a3a665342e880c393b0f01b40a42f30bfea89ea58e6bacad6f"
+        },
+        "dob": {
+            "date": "1961-01-23T18:31:42.979Z",
+            "age": 60
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/46.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/46.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/46.jpg"
+        },
+        "nat": "FI"
     },
     {
-    "id": 8,
-    "name": "Vera Floyd"
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Gaetano",
+            "last": "Fermont"
+        },
+        "location": {
+            "street": {
+                "number": 627,
+                "name": "Jan Sluiterstraat"
+            },
+            "city": "Zwartsluis",
+            "state": "Noord-Holland",
+            "country": "Netherlands",
+            "postcode": 31114,
+            "coordinates": {
+                "latitude": "32.1041",
+                "longitude": "116.2823"
+            },
+            "timezone": {
+                "offset": "-7:00",
+                "description": "Mountain Time (US & Canada)"
+            }
+        },
+        "email": "gaetano.fermont@example.com",
+        "login": {
+            "uuid": "fecfe4d8-1a90-44bd-83dd-cae1cdd19a8e",
+            "username": "heavytiger137",
+            "password": "giovanni",
+            "salt": "uclOiPJ4",
+            "md5": "931e9f023d2c343a2ecf92b9d35003d1",
+            "sha1": "df0da4c70c8b48d231d9ebc67d6bb229293b40db",
+            "sha256": "39c27c66fd34e66085fa3ef1e44ad0624e19e901ebe6c3dc6fbdf6d6d8463b14"
+        },
+        "dob": {
+            "date": "1977-06-22T13:41:27.406Z",
+            "age": 44
+        },
+        "id": {
+            "name": "BSN",
+            "value": "03062773"
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/47.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/47.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/47.jpg"
+        },
+        "nat": "NL"
     },
     {
-    "id": 9,
-    "name": "Erika Small"
-    },
-    {
-    "id": 10,
-    "name": "Marcy Terry"
-    },
-    {
-    "id": 11,
-    "name": "Walton Kirk"
-    },
-    {
-    "id": 12,
-    "name": "Goldie Hatfield"
-    },
-    {
-    "id": 13,
-    "name": "Clara Pittman"
-    },
-    {
-    "id": 14,
-    "name": "French Ayala"
-    },
-    {
-    "id": 15,
-    "name": "Jerry Watson"
-    },
-    {
-    "id": 16,
-    "name": "Glenn Hewitt"
-    },
-    {
-    "id": 17,
-    "name": "Crystal Odonnell"
+        "gender": "male",
+        "name": {
+            "title": "Mr",
+            "first": "Mehmet",
+            "last": "Dizdar"
+        },
+        "location": {
+            "street": {
+                "number": 7618,
+                "name": "Filistin Cd"
+            },
+            "city": "Edirne",
+            "state": "Sakarya",
+            "country": "Turkey",
+            "postcode": 44605,
+            "coordinates": {
+                "latitude": "70.3122",
+                "longitude": "167.4918"
+            },
+            "timezone": {
+                "offset": "+9:30",
+                "description": "Adelaide, Darwin"
+            }
+        },
+        "email": "mehmet.dizdar@example.com",
+        "login": {
+            "uuid": "5896418c-13a6-4873-bc42-215a43fb3eab",
+            "username": "happyrabbit266",
+            "password": "manchester",
+            "salt": "DkflqGUb",
+            "md5": "af5162941d4da009690463fcecc27f25",
+            "sha1": "5bd261d0634cd9d9c12e4923dcb9f6760f1467d8",
+            "sha256": "7bd8eb32da74b8388fc02c5cf633814082e3ec576a2e4d9a94c2a6223a085d1d"
+        },
+        "dob": {
+            "date": "1983-05-02T08:08:43.461Z",
+            "age": 38
+        },
+        "picture": {
+            "large": "https://randomuser.me/api/portraits/men/97.jpg",
+            "medium": "https://randomuser.me/api/portraits/med/men/97.jpg",
+            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/97.jpg"
+        },
+        "nat": "TR"
     }
 ]
