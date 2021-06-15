@@ -3,12 +3,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FriendsBluePrint"
+             xmlns:ViewModels="clr-namespace:FriendsBluePrint.ViewModels;assembly=FriendsBluePrint"
              x:Class="FriendsBluePrint.MainPage"
-             x:DataType="{x:Type local:MainViewModel}"
+             x:DataType="{x:Type ViewModels:MainViewModel}"
              Padding="25,50">
-    <ContentPage.BindingContext>
-        <local:MainViewModel />
-    </ContentPage.BindingContext>
     <Grid RowDefinitions="Auto, *">
         <Grid Grid.Row="0"
               VerticalOptions="Start"
@@ -28,7 +26,7 @@
                         Header="{Binding .}"
                         >
             <CollectionView.HeaderTemplate>
-                <DataTemplate x:DataType="{x:Type local:MainViewModel}">
+                <DataTemplate x:DataType="{x:Type ViewModels:MainViewModel}">
                     <Label Text="Friends" FontSize="Title" />
                 </DataTemplate>
             </CollectionView.HeaderTemplate>
