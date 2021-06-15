@@ -8,8 +8,7 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="FriendsBluePrint.MainPage"
              x:DataType="{x:Type ViewModels:MainViewModel}"
-             Padding="25,50"
-             >
+>
     <Grid RowDefinitions="Auto, *">
         <Grid Grid.Row="0"
               VerticalOptions="Start"
@@ -33,13 +32,14 @@
                 <CollectionView.HeaderTemplate>
                     <DataTemplate x:DataType="{x:Type ViewModels:MainViewModel}">
                         <Label Text="Friends"
-                               FontSize="Title" />
+                               FontSize="Title"/>
                     </DataTemplate>
                 </CollectionView.HeaderTemplate>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="{x:Type Models:Friend}">
                         <Grid ColumnDefinitions="Auto, *"
+                              Margin="0,10"
                               ColumnSpacing="5"
                               HorizontalOptions="Start"
                               xct:TouchEffect.Command="{Binding Source={RelativeSource AncestorType={x:Type 

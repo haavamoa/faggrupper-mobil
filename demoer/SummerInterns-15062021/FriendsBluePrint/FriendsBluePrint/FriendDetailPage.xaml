@@ -3,14 +3,29 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ViewModels="clr-namespace:FriendsBluePrint.ViewModels;assembly=FriendsBluePrint"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="FriendsBluePrint.FriendDetailPage"
              x:DataType="{x:Type ViewModels:FriendDetailViewModel}">
-    <Grid 
-          RowDefinitions="Auto, Auto">
-        <Grid Grid.Row="0" ColumnDefinitions="Auto, *" HorizontalOptions="Center" Padding="10">
-            <Label Grid.Column="0" Text="{Binding Friend.Name.First}"/>
-            <Label Grid.Column="1" Text="{Binding Friend.Name.Last}"/>
+    <Grid RowDefinitions="Auto, Auto">
+        <Grid Grid.Row="0"
+              ColumnDefinitions="Auto, *"
+              HorizontalOptions="Center"
+              Padding="10">
+            <Label Grid.Column="0"
+                   Text="{Binding Friend.Name.First}" />
+            <Label Grid.Column="1"
+                   Text="{Binding Friend.Name.Last}" />
         </Grid>
-        <Image Grid.Row="1" Source="{Binding Friend.Picture.Large}" HeightRequest="72" WidthRequest="72" />
+        <Image Grid.Row="1"
+               Source="{Binding Friend.Picture.Large}"
+               HeightRequest="72"
+               WidthRequest="72"
+               xct:TouchEffect.NativeAnimation="True"
+               xct:TouchEffect.PressedRotation="360"
+               xct:TouchEffect.PressedOpacity="1"
+               xct:TouchEffect.NormalOpacity="0.8"
+               xct:TouchEffect.PressedScale="2.0"
+               xct:TouchEffect.NormalScale="1.0"
+               xct:TouchEffect.AnimationDuration="300" />
     </Grid>
 </ContentPage>
