@@ -2,7 +2,6 @@ using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using DIPS.Xamarin.UI.Extensions;
@@ -17,22 +16,29 @@ namespace FriendsBluePrint.ViewModels
     {
         private readonly IFriendsService m_friendsService;
         private readonly IMyPlatformService m_myPlatformService;
+        private readonly INavigationService m_navigationService;
         private bool m_isRefreshing;
 
-        public MainViewModel(IFriendsService friendsService, IMyPlatformService myPlatformService)
+        public MainViewModel(IFriendsService friendsService, IMyPlatformService myPlatformService, INavigationService navigationService)
         {
             m_friendsService = friendsService;
             m_myPlatformService = myPlatformService;
+            m_navigationService = navigationService;
             AddFriendCommand = new Command<string>(AddFriend);
-            RefreshFriendsCommand = new Command(async () =>
-            {
-                await Refresh();
-                IsRefreshing = false;
-            });
+            RefreshFriendsCommand = new Command(
+                async () =>
+                {
+                    await Refresh();
+                    IsRefreshing = false;
+                });
+            NavigateToFriendDetailCommand = new Command<Friend>(
+                async friend =>
+                {
+                    await m_navigationService.NavigateTo<FriendDetailViewModel>(viewmodel => viewmodel.Friend = friend);
+                });
         }
 
         public ICommand AddFriendCommand { get; }
-        public ICommand RefreshFriendsCommand { get; }
         public ObservableCollection<Friend> Friends { get; } = new ObservableCollection<Friend>();
 
         public bool IsRefreshing
@@ -40,6 +46,11 @@ namespace FriendsBluePrint.ViewModels
             get => m_isRefreshing;
             set => PropertyChanged.RaiseWhenSet(ref m_isRefreshing, value);
         }
+
+        public ICommand NavigateToFriendDetailCommand { get; }
+        public ICommand RefreshFriendsCommand { get; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private void AddFriend(string friendName)
         {
@@ -52,17 +63,18 @@ namespace FriendsBluePrint.ViewModels
                 {
                     first = firstAndLastName.First();
                     last = firstAndLastName.Last();
-                }else if (firstAndLastName.Length == 1)
+                }
+                else if (firstAndLastName.Length == 1)
                 {
                     first = firstAndLastName.First();
                 }
-                
-                if (!string.IsNullOrEmpty(friendName)) Friends.Add(new Friend(){ Name = new Name(){ First = first, Last = last}});
+
+                if (!string.IsNullOrEmpty(friendName)) Friends.Add(new Friend { Name = new Name { First = first, Last = last } });
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                App.Current.MainPage.DisplayAlert("Oops!", "Something went wrong, check IDE console", "Ok");
+                Application.Current.MainPage.DisplayAlert("Oops!", "Something went wrong, check IDE console", "Ok");
             }
         }
 
@@ -70,31 +82,26 @@ namespace FriendsBluePrint.ViewModels
         {
             IsRefreshing = true;
         }
-        
+
         public async Task Refresh()
         {
             try
             {
                 var friends = await m_friendsService.Get();
 
-                if (Friends.Any())
-                {
-                    Friends.Clear();
-                }
+                if (Friends.Any()) Friends.Clear();
 
                 foreach (var friend in friends) Friends.Add(friend);
             }
             catch (Exception exception)
             {
                 Console.WriteLine(exception);
-                App.Current.MainPage.DisplayAlert("Oops!", "Something went wrong, check IDE console", "Ok");
+                Application.Current.MainPage.DisplayAlert("Oops!", "Something went wrong, check IDE console", "Ok");
             }
             finally
             {
                 m_myPlatformService.DoSomething();
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

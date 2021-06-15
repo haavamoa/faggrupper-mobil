@@ -1,0 +1,16 @@
+<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:FriendsBluePrint.ViewModels;assembly=FriendsBluePrint"
+             x:Class="FriendsBluePrint.FriendDetailPage"
+             x:DataType="{x:Type ViewModels:FriendDetailViewModel}">
+    <Grid 
+          RowDefinitions="Auto, Auto">
+        <Grid Grid.Row="0" ColumnDefinitions="Auto, *" HorizontalOptions="Center" Padding="10">
+            <Label Grid.Column="0" Text="{Binding Friend.Name.First}"/>
+            <Label Grid.Column="1" Text="{Binding Friend.Name.Last}"/>
+        </Grid>
+        <Image Grid.Row="1" Source="{Binding Friend.Picture.Large}" HeightRequest="72" WidthRequest="72" />
+    </Grid>
+</ContentPage>

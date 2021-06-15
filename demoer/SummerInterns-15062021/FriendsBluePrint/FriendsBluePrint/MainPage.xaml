@@ -5,9 +5,11 @@
              xmlns:ViewModels="clr-namespace:FriendsBluePrint.ViewModels;assembly=FriendsBluePrint"
              xmlns:System="clr-namespace:System;assembly=netstandard"
              xmlns:Models="clr-namespace:FriendsBluePrint.Models;assembly=FriendsBluePrint"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="FriendsBluePrint.MainPage"
              x:DataType="{x:Type ViewModels:MainViewModel}"
-             Padding="25,50">
+             Padding="25,50"
+             >
     <Grid RowDefinitions="Auto, *">
         <Grid Grid.Row="0"
               VerticalOptions="Start"
@@ -39,7 +41,11 @@
                     <DataTemplate x:DataType="{x:Type Models:Friend}">
                         <Grid ColumnDefinitions="Auto, *"
                               ColumnSpacing="5"
-                              HorizontalOptions="Start">
+                              HorizontalOptions="Start"
+                              xct:TouchEffect.Command="{Binding Source={RelativeSource AncestorType={x:Type 
+                              ViewModels:MainViewModel}}, Path=NavigateToFriendDetailCommand}"
+                              xct:TouchEffect.CommandParameter="{Binding .}"
+                              xct:TouchEffect.NativeAnimation="True">
                             <Label Grid.Column="0"
                                    Text="{Binding Name.First}"
                                    HorizontalTextAlignment="Start" />

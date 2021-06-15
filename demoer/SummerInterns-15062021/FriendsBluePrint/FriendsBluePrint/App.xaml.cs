@@ -13,11 +13,13 @@ namespace FriendsBluePrint
         {
             InitializeComponent();
 
-            var container = new ServiceContainer(new ContainerOptions { EnablePropertyInjection = false });
-            container.RegisterFrom<CompositionRoot>();
-            container.RegisterFrom(platformCompositionRoot);
-            MainPage = container.GetInstance<MainPage>();
+            Container = new ServiceContainer(new ContainerOptions { EnablePropertyInjection = false });
+            Container.RegisterFrom<CompositionRoot>();
+            Container.RegisterFrom(platformCompositionRoot);
+            MainPage = new NavigationPage(Container.GetInstance<MainPage>());
         }
+        
+        public static ServiceContainer Container { get; set; }
 
         protected override void OnStart()
         {
