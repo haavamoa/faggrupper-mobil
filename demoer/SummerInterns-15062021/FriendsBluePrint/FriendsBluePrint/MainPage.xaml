@@ -2,8 +2,9 @@
       encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:FriendsBluePrint"
              xmlns:ViewModels="clr-namespace:FriendsBluePrint.ViewModels;assembly=FriendsBluePrint"
+             xmlns:System="clr-namespace:System;assembly=netstandard"
+             xmlns:Models="clr-namespace:FriendsBluePrint.Models;assembly=FriendsBluePrint"
              x:Class="FriendsBluePrint.MainPage"
              x:DataType="{x:Type ViewModels:MainViewModel}"
              Padding="25,50">
@@ -14,23 +15,42 @@
             <Entry Grid.Column="0"
                    x:Name="nameEntry"
                    ReturnCommand="{Binding AddFriendCommand}"
-                   ReturnCommandParameter="{Binding Source={x:Reference nameEntry}, Path=Text}"
-            />
+                   ReturnCommandParameter="{Binding Source={x:Reference nameEntry}, Path=Text}" />
             <Button Grid.Column="1"
                     Text="Add"
                     Command="{Binding AddFriendCommand}"
                     CommandParameter="{Binding Source={x:Reference nameEntry}, Path=Text}" />
         </Grid>
-        <CollectionView Grid.Row="1"
-                        ItemsSource="{Binding Friends}"
-                        Header="{Binding .}"
-                        >
-            <CollectionView.HeaderTemplate>
-                <DataTemplate x:DataType="{x:Type ViewModels:MainViewModel}">
-                    <Label Text="Friends" FontSize="Title" />
-                </DataTemplate>
-            </CollectionView.HeaderTemplate>
-        </CollectionView>
+        <RefreshView Grid.Row="1" 
+                     Command="{Binding RefreshFriendsCommand}" 
+                     IsRefreshing="{Binding IsRefreshing}"
+                     >
+            <CollectionView 
+                            ItemsSource="{Binding Friends}"
+                            Header="{Binding .}">
+                <CollectionView.HeaderTemplate>
+                    <DataTemplate x:DataType="{x:Type ViewModels:MainViewModel}">
+                        <Label Text="Friends"
+                               FontSize="Title" />
+                    </DataTemplate>
+                </CollectionView.HeaderTemplate>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="{x:Type Models:Friend}">
+                        <Grid ColumnDefinitions="Auto, *"
+                              ColumnSpacing="5"
+                              HorizontalOptions="Start">
+                            <Label Grid.Column="0"
+                                   Text="{Binding Name.First}"
+                                   HorizontalTextAlignment="Start" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Name.Last}"
+                                   HorizontalTextAlignment="Start" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
     </Grid>
 
 </ContentPage>

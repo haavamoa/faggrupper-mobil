@@ -1,14 +1,28 @@
+using Newtonsoft.Json;
+
 namespace FriendsBluePrint.Models
 {
-    public class Friend
+    public  class Friend
     {
-        public Friend(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
+        [JsonProperty("gender")]
+        public Gender Gender { get; set; }
 
-        public int Id { get; }
-        public string Name { get; }
+        [JsonProperty("name")]
+        public Name Name { get; set; }
+
+        [JsonProperty("location")]
+        public Location Location { get; set; }
+
+        [JsonProperty("email")]
+        public string Email { get; set; }
+
+        [JsonProperty("dob")]
+        public DateOfBirth DateOfBirth { get; set; }
+
+        [JsonProperty("picture")]
+        public Picture Picture { get; set; }
+
+        [JsonProperty("nat")]
+        public string Nationality { get; set; }
     }
 }

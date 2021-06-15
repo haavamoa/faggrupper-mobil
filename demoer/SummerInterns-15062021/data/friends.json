@@ -99,15 +99,6 @@
             }
         },
         "email": "howard.stephens@example.com",
-        "login": {
-            "uuid": "45dd49d5-da60-42b3-bdf3-a679ad44a554",
-            "username": "bigmouse931",
-            "password": "killme",
-            "salt": "SEbLjGfG",
-            "md5": "78c42bf54059cc4cf6dbcb3752809e78",
-            "sha1": "016582f47d111d2f2e81ba2fa68cb7ec15e32cb9",
-            "sha256": "3761bc9ccdcd3b710440720436cae9b66703166c4313ee22da408ad381c19c75"
-        },
         "dob": {
             "date": "1972-07-23T11:12:06.919Z",
             "age": 49
@@ -145,15 +136,6 @@
             }
         },
         "email": "sara.larson@example.com",
-        "login": {
-            "uuid": "6a07d275-5810-4bbb-b811-016886aca11f",
-            "username": "redmeercat154",
-            "password": "shao",
-            "salt": "K4MeQT6u",
-            "md5": "d3fd9845a5fbc2869431df62d30e371d",
-            "sha1": "d21adc692af31ce3b607ba4fba3ee034521d9301",
-            "sha256": "fa1a013dfa904375a9a537dc1851d6fb9fd6f1b55dd8aac5cf15eff006d304ed"
-        },
         "dob": {
             "date": "1952-05-31T03:27:36.006Z",
             "age": 69
@@ -191,15 +173,6 @@
             }
         },
         "email": "asuncion.rodriguez@example.com",
-        "login": {
-            "uuid": "d05d6c7c-60dd-43ce-bc95-343bafbf2591",
-            "username": "crazywolf680",
-            "password": "dawson",
-            "salt": "PvHgiAqK",
-            "md5": "d05525580e3f9e7a8ebc1a91fbc28b5f",
-            "sha1": "da04246dcb2139cd3c4b0d07582ac8ec5bd1aad4",
-            "sha256": "90d27a97d3996a5f88d6be85a7f07e4b5160e401d85c1c281ac11f70e79ac893"
-        },
         "dob": {
             "date": "1946-04-13T21:53:22.974Z",
             "age": 75
@@ -237,15 +210,6 @@
             }
         },
         "email": "meral.karaer@example.com",
-        "login": {
-            "uuid": "bce13223-3fb5-4725-b8f5-2d09bd6ce864",
-            "username": "bigostrich611",
-            "password": "glock",
-            "salt": "r1XbXNGQ",
-            "md5": "5bf13c799206be69df452593bb025959",
-            "sha1": "b3b320acba849af70bc2f2a53586fb6989d8a723",
-            "sha256": "d1ec39810530edc96d4d7fa915fb820bffa70cb3ab71a7594217051d2ec35a78"
-        },
         "dob": {
             "date": "1995-02-22T03:27:06.239Z",
             "age": 26
@@ -283,15 +247,6 @@
             }
         },
         "email": "stella.stelter@example.com",
-        "login": {
-            "uuid": "770722b3-38f4-4178-931a-70df31f8df7a",
-            "username": "goldenostrich287",
-            "password": "dian",
-            "salt": "qWDbIsiX",
-            "md5": "857e099c3954041991bd89f9f46cc627",
-            "sha1": "7f2e0d9456339378877f65bb6d55b8ce0d8558b4",
-            "sha256": "aa594e899c654c81ad9f1e276d800edfde847918e28091755233c8d62c24d359"
-        },
         "dob": {
             "date": "1980-07-26T11:20:48.236Z",
             "age": 41
@@ -329,15 +284,6 @@
             }
         },
         "email": "eetu.nurmi@example.com",
-        "login": {
-            "uuid": "83b856db-8177-4ab7-8928-18829e876e95",
-            "username": "greenkoala700",
-            "password": "chong",
-            "salt": "bausBLgx",
-            "md5": "ed15b1f5501f8e8d6057b7496b50171d",
-            "sha1": "ecf599c947679e0230c40ee431f0551b4fdbfd88",
-            "sha256": "f020208d313575a3a665342e880c393b0f01b40a42f30bfea89ea58e6bacad6f"
-        },
         "dob": {
             "date": "1961-01-23T18:31:42.979Z",
             "age": 60
@@ -375,22 +321,9 @@
             }
         },
         "email": "gaetano.fermont@example.com",
-        "login": {
-            "uuid": "fecfe4d8-1a90-44bd-83dd-cae1cdd19a8e",
-            "username": "heavytiger137",
-            "password": "giovanni",
-            "salt": "uclOiPJ4",
-            "md5": "931e9f023d2c343a2ecf92b9d35003d1",
-            "sha1": "df0da4c70c8b48d231d9ebc67d6bb229293b40db",
-            "sha256": "39c27c66fd34e66085fa3ef1e44ad0624e19e901ebe6c3dc6fbdf6d6d8463b14"
-        },
         "dob": {
             "date": "1977-06-22T13:41:27.406Z",
             "age": 44
-        },
-        "id": {
-            "name": "BSN",
-            "value": "03062773"
         },
         "picture": {
             "large": "https://randomuser.me/api/portraits/men/47.jpg",
@@ -425,15 +358,6 @@
             }
         },
         "email": "mehmet.dizdar@example.com",
-        "login": {
-            "uuid": "5896418c-13a6-4873-bc42-215a43fb3eab",
-            "username": "happyrabbit266",
-            "password": "manchester",
-            "salt": "DkflqGUb",
-            "md5": "af5162941d4da009690463fcecc27f25",
-            "sha1": "5bd261d0634cd9d9c12e4923dcb9f6760f1467d8",
-            "sha256": "7bd8eb32da74b8388fc02c5cf633814082e3ec576a2e4d9a94c2a6223a085d1d"
-        },
         "dob": {
             "date": "1983-05-02T08:08:43.461Z",
             "age": 38

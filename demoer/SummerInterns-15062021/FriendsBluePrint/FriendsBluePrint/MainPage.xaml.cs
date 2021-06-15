@@ -24,7 +24,10 @@ namespace FriendsBluePrint
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            m_mainViewModel.Initialize();
+            if (BindingContext == m_mainViewModel)
+            {
+                m_mainViewModel.Initialize();    
+            }
         }
     }
 }
