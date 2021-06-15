@@ -1,0 +1,38 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FriendsBluePrint"
+             x:Class="FriendsBluePrint.MainPage"
+             x:DataType="{x:Type local:MainViewModel}"
+             Padding="25,50">
+    <ContentPage.BindingContext>
+        <local:MainViewModel />
+    </ContentPage.BindingContext>
+    <Grid RowDefinitions="Auto, *">
+        <Grid Grid.Row="0"
+              VerticalOptions="Start"
+              ColumnDefinitions="*, Auto">
+            <Entry Grid.Column="0"
+                   x:Name="nameEntry"
+                   ReturnCommand="{Binding AddFriendCommand}"
+                   ReturnCommandParameter="{Binding Source={x:Reference nameEntry}, Path=Text}"
+            />
+            <Button Grid.Column="1"
+                    Text="Add"
+                    Command="{Binding AddFriendCommand}"
+                    CommandParameter="{Binding Source={x:Reference nameEntry}, Path=Text}" />
+        </Grid>
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Friends}"
+                        Header="{Binding .}"
+                        >
+            <CollectionView.HeaderTemplate>
+                <DataTemplate x:DataType="{x:Type local:MainViewModel}">
+                    <Label Text="Friends" FontSize="Title" />
+                </DataTemplate>
+            </CollectionView.HeaderTemplate>
+        </CollectionView>
+    </Grid>
+
+</ContentPage>
