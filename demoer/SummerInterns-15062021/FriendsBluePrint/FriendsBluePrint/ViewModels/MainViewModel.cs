@@ -8,6 +8,7 @@ using System.Windows.Input;
 using DIPS.Xamarin.UI.Extensions;
 using FriendsBluePrint.Models;
 using FriendsBluePrint.Services;
+using FriendsBluePrint.Services.Platform;
 using Xamarin.Forms;
 
 namespace FriendsBluePrint.ViewModels
@@ -15,11 +16,13 @@ namespace FriendsBluePrint.ViewModels
     public class MainViewModel : INotifyPropertyChanged
     {
         private readonly IFriendsService m_friendsService;
+        private readonly IMyPlatformService m_myPlatformService;
         private bool m_isRefreshing;
 
-        public MainViewModel(IFriendsService friendsService)
+        public MainViewModel(IFriendsService friendsService, IMyPlatformService myPlatformService)
         {
             m_friendsService = friendsService;
+            m_myPlatformService = myPlatformService;
             AddFriendCommand = new Command<string>(AddFriend);
             RefreshFriendsCommand = new Command(async () =>
             {
@@ -85,6 +88,10 @@ namespace FriendsBluePrint.ViewModels
             {
                 Console.WriteLine(exception);
                 App.Current.MainPage.DisplayAlert("Oops!", "Something went wrong, check IDE console", "Ok");
+            }
+            finally
+            {
+                m_myPlatformService.DoSomething();
             }
         }
 

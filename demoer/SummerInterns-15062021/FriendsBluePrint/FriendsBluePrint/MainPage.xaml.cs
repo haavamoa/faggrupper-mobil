@@ -13,12 +13,12 @@ namespace FriendsBluePrint
     {
         private readonly MainViewModel m_mainViewModel;
 
-        public MainPage()
+        public MainPage(MainViewModel mainViewModel)
         {
             InitializeComponent();
             
             //Dependency injection
-            BindingContext = m_mainViewModel =  new MainViewModel(new FriendsService());
+            BindingContext = m_mainViewModel = mainViewModel;
         }
 
         protected override void OnAppearing()

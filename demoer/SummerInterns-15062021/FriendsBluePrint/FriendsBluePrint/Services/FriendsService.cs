@@ -10,9 +10,9 @@ namespace FriendsBluePrint.Services
     {
         private readonly HttpClient m_httpClient;
 
-        public FriendsService()
+        public FriendsService(HttpClient httpClient)
         {
-            m_httpClient = new HttpClient();
+            m_httpClient = httpClient;
         }
         
         public async Task<List<Friend>> Get()

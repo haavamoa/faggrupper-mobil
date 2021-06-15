@@ -1,4 +1,5 @@
 ﻿using System;
+using LightInject;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,11 +9,14 @@ namespace FriendsBluePrint
 {
     public partial class App : Application
     {
-        public App()
+        public App(ICompositionRoot platformCompositionRoot)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            var container = new ServiceContainer(new ContainerOptions { EnablePropertyInjection = false });
+            container.RegisterFrom<CompositionRoot>();
+            container.RegisterFrom(platformCompositionRoot);
+            MainPage = container.GetInstance<MainPage>();
         }
 
         protected override void OnStart()

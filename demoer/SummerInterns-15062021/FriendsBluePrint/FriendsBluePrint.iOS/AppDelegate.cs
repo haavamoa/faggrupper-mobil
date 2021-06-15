@@ -22,7 +22,7 @@ namespace FriendsBluePrint.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+            LoadApplication(new App(new iOSCompositionRoot()));
 
             return base.FinishedLaunching(app, options);
         }
