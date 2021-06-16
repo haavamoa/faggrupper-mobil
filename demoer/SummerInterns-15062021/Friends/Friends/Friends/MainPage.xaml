@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"
+      encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Friends.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:ViewModels="clr-namespace:Friends.ViewModels;assembly=Friends"
+             xmlns:Models="clr-namespace:Friends.Models;assembly=Friends"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             ios:Page.UseSafeArea="true"
+             Title="MainPage"
+             x:DataType="{x:Type ViewModels:MainViewModel}">
+
+    <Grid ColumnDefinitions="*,Auto"
+          RowDefinitions="Auto,*"
+          ColumnSpacing="15"
+          RowSpacing="0"
+          Padding="15,0,15,0">
+        <Entry Grid.Row="0"
+               Grid.Column="0"
+               Text="{Binding NewFriendName}"
+               ReturnCommand="{Binding AddFriendCommand}" />
+
+        <Button Grid.Row="0"
+                Grid.Column="1"
+                Text="Add"
+                Command="{Binding AddFriendCommand}" />
+
+        <CollectionView Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Friends}"
+                        Header="Friends"
+                        IsVisible="{Binding IsBusy, Converter={xct:InvertedBoolConverter}}">
+
+            <CollectionView.HeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding .}"
+                           FontSize="Title" />
+                </DataTemplate>
+            </CollectionView.HeaderTemplate>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Type Models:Friend}">
+                    <Grid xct:TouchEffect.NormalRotation="0"
+                          xct:TouchEffect.PressedRotation="90"
+                          xct:TouchEffect.AnimationDuration="250"
+                          Margin="15,10,15,10"
+                          ColumnDefinitions="Auto,*">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type 
+                              ViewModels:MainViewModel}}, Path=NavigateToFriendDetailCommand}"
+                                CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
+                        <Label Grid.Column="0"
+                               Text="{Binding Name.First}" />
+                        <Label Grid.Column="1"
+                               Text="{Binding Name.Last}" />
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <ActivityIndicator Grid.Row="1" 
+                           VerticalOptions="Start" 
+                           Margin="25" 
+                           IsVisible="{Binding IsBusy}"
+                           IsRunning="True"/>
+
+
+    </Grid>
+</ContentPage>
