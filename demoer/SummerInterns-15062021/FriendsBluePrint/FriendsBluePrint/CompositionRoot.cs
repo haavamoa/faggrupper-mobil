@@ -10,15 +10,15 @@ namespace FriendsBluePrint
         public void Compose(IServiceRegistry serviceRegistry)
         {
             serviceRegistry.Register<MainPage>();
-            var viewLookupService = new ViewModelPageLocator(serviceRegistry);
-            serviceRegistry.Register<ViewModelPageLocator>(s => viewLookupService, new PerContainerLifetime());
+            var viewModelLocator = new ViewModelPageLocator(serviceRegistry);
+            serviceRegistry.Register<ViewModelPageLocator>(s => viewModelLocator, new PerContainerLifetime());
             serviceRegistry.Register<MainViewModel>();
             serviceRegistry.Register<IFriendsService, FriendsService>();
             serviceRegistry.Register<HttpClient>();
             serviceRegistry.Register<INavigationService, NavigationService>();
             
-            //Register pages other than main page
-            viewLookupService.Register<FriendDetailViewModel, FriendDetailPage>();
+            //Register pages that should be navigateable
+            viewModelLocator.Register<FriendDetailViewModel, FriendDetailPage>();
         }
     }
 }
