@@ -19,6 +19,7 @@ namespace FriendsBluePrint
             
             //Register pages that should be navigateable
             viewModelLocator.Register<FriendDetailViewModel, FriendDetailPage>();
+            
         }
     }
 }

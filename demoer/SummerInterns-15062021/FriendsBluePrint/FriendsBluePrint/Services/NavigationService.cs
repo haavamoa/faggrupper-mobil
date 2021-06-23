@@ -14,7 +14,7 @@ namespace FriendsBluePrint.Services
             m_viewModelPageLocator = viewModelPageLocator;
         }
         
-        public async Task<TViewModel> NavigateTo<TViewModel>(Action<TViewModel> beforeNavigation = null) where TViewModel : class
+        public async Task<TViewModel> NavigateTo<TViewModel>(Action<TViewModel> beforeNavigation = null) where TViewModel : IViewModel
         {
             var (viewModel, page) = m_viewModelPageLocator.Lookup<TViewModel>();
 
@@ -22,8 +22,17 @@ namespace FriendsBluePrint.Services
 
             page.BindingContext = viewModel;
 
+            //Run initialize
+            _ = viewModel.Initialize();
             await Application.Current.MainPage.Navigation.PushAsync(page);
+            
+            
             return viewModel;
         }
+    }
+
+    public interface IViewModel
+    {
+        Task Initialize();
     }
 }

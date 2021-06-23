@@ -23,7 +23,7 @@ namespace FriendsBluePrint.Services
             m_pageMap.Add(typeof(TViewModel), () => App.Container.GetInstance<TPage>());
         }
         
-        public Tuple<TViewModel,Page> Lookup<TViewModel>() where TViewModel : class
+        public Tuple<TViewModel,Page> Lookup<TViewModel>() where TViewModel : IViewModel
         {
             if (!m_pageMap.TryGetValue(typeof(TViewModel), out var factory))
             {

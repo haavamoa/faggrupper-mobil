@@ -34,7 +34,10 @@ namespace FriendsBluePrint.ViewModels
             NavigateToFriendDetailCommand = new Command<Friend>(
                 async friend =>
                 {
-                    await m_navigationService.NavigateTo<FriendDetailViewModel>(viewmodel => viewmodel.Friend = friend);
+                    await m_navigationService.NavigateTo<FriendDetailViewModel>(viewmodel =>
+                    {
+                        viewmodel.Friend = friend;
+                    });
                 });
         }
 
